@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+header {
+  text-align: center;
+  font-size: 64px;
+  color: whitesmoke;
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+.favorite_movies {
+  color: whitesmoke;
+  font-size: 32px;
+  padding-left: 20px;
+}
+
+.menu_carrusel {
+  overflow: scroll;
+  position: relative;
+}
+.menu_carrusel .carrusel_content {
+  white-space: nowrap;
+  margin: 10px;
+  padding: 10px 0px;
+}
+.menu_carrusel .carrusel_content:hover .carrusel {
+  opacity: 0.3;
+}
+.menu_carrusel .carrusel_content:hover .carrusel:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.menu_carrusel .carrusel_content .carrusel {
+  width: 300px;
+  height: 350px;
+  margin: 10px 30px 50px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  white-space: normal;
+  box-shadow: 0px 0px 10px whitesmoke;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.5s all;
+  transform-origin: center left;
+}
+.menu_carrusel .carrusel_content .carrusel:hover ~ .carrusel {
+  transform: translate3d(30px, 0, 0);
+}
+.menu_carrusel .carrusel_content .carrusel:hover .carrusel_text {
+  color: white;
+}
+.menu_carrusel .carrusel_content .carrusel .img {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}

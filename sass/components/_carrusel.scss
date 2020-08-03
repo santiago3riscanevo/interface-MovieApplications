@@ -1,0 +1,56 @@
+.favorite_movies{
+    color: whitesmoke;
+    font-size: 32px;
+    padding-left: 20px;
+}
+
+
+.menu_carrusel{
+    overflow: scroll; //revisar despues
+    position: relative;
+
+    .carrusel_content{
+        white-space: nowrap;
+        margin: 10px;
+        padding: 10px 0px;
+
+        &:hover .carrusel{
+            opacity: 0.3;
+        }
+
+        &:hover .carrusel:hover{
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .carrusel{
+            width: 300px;
+            height: 350px;
+            margin: 10px 30px 50px 0;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            white-space: normal;
+            box-shadow:  0px 0px 10px whitesmoke;
+            display: inline-block;
+            cursor: pointer;
+            transition:  0.5s all;
+            transform-origin:  center left;
+
+
+            &:hover ~ .carrusel{
+                transform: translate3d(30px,0,0);
+            }
+
+            &:hover .carrusel_text{
+                color: white;
+            }
+
+            .img{
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+    }
+}
